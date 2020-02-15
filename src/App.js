@@ -1,12 +1,16 @@
 import React from 'react';
-// import './App.css';
+import './App.css';
 import Card from './Card.js';
 import CardLayout from './CardLayout.js';
 import Navigation from './Navigation'
 import Banner from './Banner.js';
 import About from './About.js';
-// import Services from './Services.js';
+import Services from './Services.js';
 import Download from './Download.js';
+import RedBlueButton from './RedBlueButton.js';
+
+
+
 function App() {
   return (
 
@@ -20,13 +24,14 @@ function App() {
      menuName=" Menu"
      menuItemOne="About"
      menuItemTwo="Privacy Settings"
-     menuItemThree="Report"
      LogIn = "Log In"
      logOut="Log Out"
      UserName="User Name"
      Password="Password"
      />
-
+     <center>
+<RedBlueButton/>
+</center>
       <Banner
       bannerImgOne ="https://images.unsplash.com/photo-1522041350204-22285237eeca?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2100&q=80"
       bannerImgTwo="https://images.unsplash.com/photo-1553051021-9f94520a6cad?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2100&q=80"

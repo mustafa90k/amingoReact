@@ -22,8 +22,9 @@ return (
         </a>
         <div className="dropdown-menu" aria-labelledby="navbarDropdown">
           <a className="dropdown-item"  href="#about">{prop.menuItemOne}</a>
-          <a className="dropdown-item" href="http://localhost:3000/#">{prop.menuItemTwo} </a>
           <div className="dropdown-divider"></div>
+          <a className="dropdown-item" href="http://localhost:3000/#">{prop.menuItemTwo} </a>
+         
           <a className="dropdown-item" href="http://localhost:3000/#">{prop.menuItemThree}
         </a>
         </div>
