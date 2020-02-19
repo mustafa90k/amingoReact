@@ -34,14 +34,14 @@ function App() {
      UserName="User Name"
      Password="Password"
      />
-     <center>
+     {/* <center>
 
        <NewsletterBanner/>
 <SaveButton
 label ="Save"/>
 <RedBlueButton/>
 <CounterButton/>
-</center>
+</center> */}
       <Banner
       bannerImgOne ="https://images.unsplash.com/photo-1522041350204-22285237eeca?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2100&q=80"
       bannerImgTwo="https://images.unsplash.com/photo-1553051021-9f94520a6cad?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2100&q=80"
@@ -94,8 +94,8 @@ label ="Save"/>
        button=" Show your talent "
        />  */}
       </CardLayout>
-      <LoadButton/>
-      <LoadButton2/>
+      {/* <LoadButton/>
+      <LoadButton2/> */}
 <br/>
 <Download
 header="We are also on Google Play and App Store"
