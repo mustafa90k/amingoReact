@@ -7,7 +7,12 @@ import Banner from './Banner.js';
 import About from './About.js';
 import Services from './Services.js';
 import Download from './Download.js';
-import RedBlueButton from './RedBlueButton.js';
+// import RedBlueButton from './RedBlueButton.js';
+// import CounterButton from './CounterButton';
+// import SaveButton from './SaveButton';
+// import NewsletterBanner from './NewsletterBanner';
+// import LoadButton from './LoadButton';
+// import LoadButton2 from './LoadButton2';
 
 
 
@@ -30,7 +35,12 @@ function App() {
      Password="Password"
      />
      <center>
+
+       <NewsletterBanner/>
+<SaveButton
+label ="Save"/>
 <RedBlueButton/>
+<CounterButton/>
 </center>
       <Banner
       bannerImgOne ="https://images.unsplash.com/photo-1522041350204-22285237eeca?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2100&q=80"
@@ -84,6 +94,8 @@ function App() {
        button=" Show your talent "
        />  */}
       </CardLayout>
+      <LoadButton/>
+      <LoadButton2/>
 <br/>
 <Download
 header="We are also on Google Play and App Store"
