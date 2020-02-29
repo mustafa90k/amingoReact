@@ -1,7 +1,29 @@
-import React from 'react';
+import React , { useContext} from 'react';
+import{Link} from 'react-router-dom';
+import AppContext from './AppContext';
 
 const Navigation = (prop)=>{  //equals function Navigation (){  .... return(...)   }
 
+const [globalState, setGlobalState]= useContext(
+  AppContext
+)
+const logOut = ()=>{
+  setGlobalState(
+    {
+      ...globalState,
+      loggedIn: false
+    }
+  )
+}
+const loggedIn = ()=>{
+  setGlobalState({  
+    ...globalState,
+  loggedIn: true
+}
+  )
+
+
+}
 return (
 
 <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -14,14 +36,14 @@ return (
     <ul className="navbar-nav mr-auto">
       <li className="nav-item active">
 
-        <a className="nav-link" href="http://localhost:3000/#">{prop.home} <span className="sr-only">(current)</span></a>
+        <Link className="nav-link" to="/">{prop.home} <span className="sr-only">(current)</span></Link>
       </li>
       <li className="nav-item dropdown">
-        <a className="nav-link dropdown-toggle" href="http://localhost:3000/#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <Link className="nav-link dropdown-toggle" to="http://localhost:3000/#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           {prop.menuName}
-        </a>
+        </Link>
         <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a className="dropdown-item"  href="#about">{prop.menuItemOne}</a>
+          <Link className="dropdown-item"  to="/contact">{prop.menuItemOne}</Link>
           <div className="dropdown-divider"></div>
           <a className="dropdown-item" href="http://localhost:3000/#">{prop.menuItemTwo} </a>
          
@@ -30,13 +52,13 @@ return (
         </div>
       </li>
       <li className="nav-item">
-        <a className="nav-link" href="http://localhost:3000/#">{prop.link}</a>
+        <Link className="nav-link" to="http://localhost:3000/#">{prop.link}</Link>
       </li>
       
       <li className="nav-item dropdown">
-        <a className="nav-link dropdown-toggle"  id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <Link className="nav-link dropdown-toggle"  id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           {prop.LogIn}
-        </a>
+        </Link>
         <div className="dropdown-menu" aria-labelledby="navbarDropdown">
         <input className="form-control mr-sm-2" type="User Name" placeholder="User Name" aria-label="User Name"/>
           <div className="dropdown-divider"></div>
@@ -48,17 +70,29 @@ return (
 
 
       <li className="nav-item">
-        <a className="nav-link disabled" href="http://localhost:3000/#" tabindex="-1" aria-disabled="true">{prop.logOut} </a>
+        <Link className="nav-link disabled" to="http://localhost:3000/#" tabindex="-1" aria-disabled="true">{prop.logOut} </Link>
       </li>
     </ul>
     <form className="form-inline my-2 my-lg-0">
       <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"/>
       <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+
+      
       
     </form>
+    
   </div>
+  {
+    globalState.loggedIn === false &&
+    <button onClick={loggedIn} className="btn btn-primary"> Log In</button>
+  }
+  {
+    globalState.loggedIn === true &&
+    <button onClick={logOut} className=" btn btn-primary"> Log Out</button>
+  }
 </nav>
 )}
+
 
 
 export default Navigation;

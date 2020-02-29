@@ -11,7 +11,7 @@ const Card = (prop) =>{
             <div className="card-body">
               <h5 className="card-title">{prop.title}</h5>
               <p className="card-text">{prop.description}</p>
-              <a href="#" className="btn btn-primary">{prop.button}</a>
+              <a href="#" className="btn btn-primary">Click Here</a>
             </div>
           </div>
       //     <div className="container-fluid p-0">
